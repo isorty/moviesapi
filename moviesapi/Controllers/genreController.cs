@@ -34,6 +34,7 @@ namespace movieapi.Controllers
         {
             var movies = await _context.Movies.Where(m => m.GenreId == id).Select(m => new
             {
+                m.Id,
                 m.Title,
                 m.Description,
                 m.Rating
